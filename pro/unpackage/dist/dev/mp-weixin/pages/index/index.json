@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "创建任务",
+  "usingComponents": {
+    "mx-date-picker": "/components/mx-datepicker/mx-datepicker",
+    "lu-popup-wrapper": "/components/lu-popup-wrapper/lu-popup-wrapper"
+  }
+}

@@ -23,8 +23,9 @@
 			<view v-if="showChooseTime">
 				<view class="type">请选择约定类型</view>
 				<view class="frequency">
-					<view class="frequency1" @click="frequency(1)" :class="{active:Appointment}">约定一次</view>
-					<view class="frequency2" @click="frequency(2)" :class="{active:!Appointment}">约定多次</view>
+					<view class="frequency1" v-for="(item,key,index) in AgreementCount" @click="frequency(index)" :class="frequencyIndex===index?'active':''">{{item}}</view>
+					<!-- <view class="frequency1" @click="frequency(1)" :class="{active:Appointment}">约定一次</view>
+					<view class="frequency2" @click="frequency(2)" :class="{active:!Appointment}">约定多次</view> -->
 				</view>
 				
 				<view v-if="showCryl">
@@ -72,6 +73,7 @@
 <script>
 	import MxDatePicker from "@/components/mx-datepicker/mx-datepicker.vue";
 	import luPopupWrapper from "@/components/lu-popup-wrapper/lu-popup-wrapper.vue";
+	import {agreementList ,agreementCountList} from '../../utils/api.js'
 	export default {
 		components:{
 			MxDatePicker,
@@ -82,7 +84,9 @@
 				addImg:false,
 				types:false,
 				typeChooe:"一起约",
-				typeList:["一起约","约定我","约定他"],
+				typeList:[],
+				AgreementCount:'',
+				frequencyIndex:1,
 				imgList:[],
 				appointedTime:'请选择约定时间',
 				showChooseTime:false,
@@ -107,17 +111,33 @@
 			}
 		},
 		onLoad() {
-
+			this.getAgreementList()
+			this.getAgreementCountList()
 		},
 		methods: {
+			// 获取约定类型
+			getAgreementList(){
+				agreementList().then(res=>{
+					this.typeList = res.date
+				})
+			},
+			//获取约定次数类型
+			getAgreementCountList(){
+				agreementCountList().then(res=>{
+					this.AgreementCount = res.date
+					console.log(this.AgreementCount)
+				})
+			},
+			
 			//选择约定次数		
 			frequency(type){
+				console.log(type)
 				if(type===1){
-					this.Appointment = true
 					this.showCryl = false
+					this.frequencyIndex = type
 				}else if(type===2){
-					this.Appointment = false
 					this.showCryl = true
+					this.frequencyIndex = type
 				} else if(type===3){
 					this.AppointmentCryl = true
 				} else{
@@ -180,7 +200,6 @@
 					    duration: 1000
 					});
 				}
-				
 			},
 				
 			//弹出图片列表
@@ -289,7 +308,7 @@
 				background: #00e2e4;
 				color: white;
 			}
-			.frequency1,.frequency2{
+			.frequency1{
 				display: inline-block;
 				text-align: center;
 				padding: 10px 5px;

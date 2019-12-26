@@ -23,9 +23,7 @@
 			<view v-if="showChooseTime">
 				<view class="type">请选择约定类型</view>
 				<view class="frequency">
-					<view class="frequency1" v-for="(item,key,index) in AgreementCount" @click="frequency(index)" :class="frequencyIndex===index?'active':''">{{item}}</view>
-					<!-- <view class="frequency1" @click="frequency(1)" :class="{active:Appointment}">约定一次</view>
-					<view class="frequency2" @click="frequency(2)" :class="{active:!Appointment}">约定多次</view> -->
+					<view class="frequency1" v-for="(item,index) in AgreementCount" :key='index' @click="frequency(index)" :class="frequencyKey===index?'active':''">{{item}}</view>
 				</view>
 				
 				<view v-if="showCryl">
@@ -36,7 +34,7 @@
 								<view class="uni-input">{{array[index]}}</view>
 							</picker>
 						</view>					
-						<view class="frequency2" @click="frequency(4)" :class="{active:!AppointmentCryl}"><input placeholder="请输入固定次数" /></view>
+						<view class="frequency2" @click="frequency(4)" :class="{active:!AppointmentCryl}"><input placeholder="请输入固定次数"/></view>
 					</view>
 				</view>
 			</view>
@@ -50,7 +48,7 @@
 			</view>
 			
 			<view>
-				 <mx-date-picker :show="showPicker" :type="type" :value="value" :show-tips="true" :show-seconds="true" @confirm="onSelected" @cancel="onSelected" />
+				<mx-date-picker :show="showPicker" :type="type" :value="value" :show-tips="true" :show-seconds="true" @confirm="onSelected" @cancel="onSelected" />
 			</view>
 		</view>
 		<view class="detail" v-if='showDetail'>
@@ -61,7 +59,7 @@
 					<view>ss</view>
 					<view>ss</view>
 				</scroll-view>
-				<view class="detail-know">知道了</view>
+				<view class="detail-know" @click="Iknow">我知道了</view>
 			</view>
 		</view>
 		<view class="next">
@@ -73,7 +71,7 @@
 <script>
 	import MxDatePicker from "@/components/mx-datepicker/mx-datepicker.vue";
 	import luPopupWrapper from "@/components/lu-popup-wrapper/lu-popup-wrapper.vue";
-	import {agreementList ,agreementCountList} from '../../utils/api.js'
+	import {agreementList ,agreementCountList ,agreementCycle ,agreementCycleTime} from '../../utils/api.js'
 	export default {
 		components:{
 			MxDatePicker,
@@ -86,7 +84,7 @@
 				typeChooe:"一起约",
 				typeList:[],
 				AgreementCount:'',
-				frequencyIndex:1,
+				frequencyKey:0,
 				imgList:[],
 				appointedTime:'请选择约定时间',
 				showChooseTime:false,
@@ -99,7 +97,7 @@
 				showDetail:false,
 				showDetail1:false,
 								
-				array:['三天一次','一周一次','两周一次','一月一次'],
+				array:[],
 				showPicker: false,
 				date: '2019-01-01',
 				time: '15:00:12',
@@ -113,31 +111,43 @@
 		onLoad() {
 			this.getAgreementList()
 			this.getAgreementCountList()
+			this.getAgreementCycle()
+			this.getAgreementCycleTime()
 		},
 		methods: {
 			// 获取约定类型
 			getAgreementList(){
 				agreementList().then(res=>{
-					this.typeList = res.date
+					this.typeList = this.filter(res.date)
 				})
 			},
 			//获取约定次数类型
 			getAgreementCountList(){
 				agreementCountList().then(res=>{
-					this.AgreementCount = res.date
-					console.log(this.AgreementCount)
+					this.AgreementCount = this.filter(res.date)
 				})
 			},
-			
+			//约定周期类型
+			getAgreementCycle(){
+				agreementCycle().then(res=>{
+					this.cycleList = this.filter(res.date)
+				})
+			},
+			//约定周期时间
+			getAgreementCycleTime(){
+				agreementCycleTime().then(res=>{
+					this.array = this.filter(res.date)
+				})
+			},
 			//选择约定次数		
 			frequency(type){
 				console.log(type)
-				if(type===1){
+				if(type===0){
 					this.showCryl = false
-					this.frequencyIndex = type
-				}else if(type===2){
+					this.frequencyKey = type
+				}else if(type===1){
 					this.showCryl = true
-					this.frequencyIndex = type
+					this.frequencyKey = type
 				} else if(type===3){
 					this.AppointmentCryl = true
 				} else{
@@ -201,7 +211,10 @@
 					});
 				}
 			},
-				
+			//点击我知道了
+			Iknow(){
+				this.showDetail = false
+			},	
 			//弹出图片列表
 			addImgs(){
 				this.addImg = true
@@ -228,6 +241,10 @@
 				    	console.log('选择失败')
 				    }
 				});
+			},
+			//过滤对象
+			filter(data){
+				return Object.values(data)
 			}
 		}
 	}
@@ -280,7 +297,8 @@
 				.addpicture{
 					width: 50px;
 					height: 50px;
-					border: 1px solid #1ccfc9;			
+					border: 1px solid #1ccfc9;		
+					display: inline-block;
 				}
 			}
 			.camera{
@@ -308,7 +326,7 @@
 				background: #00e2e4;
 				color: white;
 			}
-			.frequency1{
+			.frequency1,.frequency2{
 				display: inline-block;
 				text-align: center;
 				padding: 10px 5px;

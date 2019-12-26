@@ -75,6 +75,7 @@
           width: 50px;
           height: 50px;
           border: 1px solid #1ccfc9;
+          display: inline-block;
 }
 .content .text-area .together-content .camera.data-v-eb0999b8 {
         background: #e2fdff;
@@ -101,7 +102,7 @@
         background: #00e2e4;
         color: white;
 }
-.content .text-area .frequency .frequency1.data-v-eb0999b8 {
+.content .text-area .frequency .frequency1.data-v-eb0999b8, .content .text-area .frequency .frequency2.data-v-eb0999b8 {
         display: inline-block;
         text-align: center;
         padding: 10px 5px;

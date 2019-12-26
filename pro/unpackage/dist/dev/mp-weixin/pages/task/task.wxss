@@ -24,12 +24,12 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.task.data-v-9120aa5c {
+.task.data-v-4ae03219 {
   background: #eee;
   height: 100%;
   padding: 10px;
 }
-.task .task-keep.data-v-9120aa5c {
+.task .task-keep.data-v-4ae03219 {
     background: white;
     text-align: center;
     color: #666;
@@ -39,11 +39,11 @@
     margin-bottom: 8px;
     border-radius: 5px;
 }
-.task .task-keep .keep-num.data-v-9120aa5c {
+.task .task-keep .keep-num.data-v-4ae03219 {
       font-size: 22px;
       padding: 0 5px;
 }
-.task .task-doing.data-v-9120aa5c {
+.task .task-doing.data-v-4ae03219 {
     background: white;
     color: #666;
     padding: 10px;
@@ -51,7 +51,7 @@
     margin-bottom: 8px;
     border-radius: 5px;
 }
-.task .task-finsh.data-v-9120aa5c {
+.task .task-finsh.data-v-4ae03219 {
     background: white;
     color: #666;
     padding: 10px;
@@ -59,14 +59,14 @@
     margin-bottom: 8px;
     border-radius: 5px;
 }
-.task .task-fail.data-v-9120aa5c {
+.task .task-fail.data-v-4ae03219 {
     background: white;
     color: #666;
     padding: 10px 15px;
     border-radius: 5px;
     margin-bottom: 8px;
 }
-.task .task-add.data-v-9120aa5c {
+.task .task-add.data-v-4ae03219 {
     width: 50px;
     height: 50px;
     color: white;
@@ -76,7 +76,7 @@
     background: #3393f4;
     border-radius: 50%;
 }
-.task .task-add text.data-v-9120aa5c {
+.task .task-add text.data-v-4ae03219 {
       display: block;
       text-align: center;
       font-size: 14px;

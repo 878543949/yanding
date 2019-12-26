@@ -24,84 +24,84 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content.data-v-31e2de98 {
+.content.data-v-a9629fc2 {
   text-align: left;
   background: #eeeeee;
 }
-.content .text-area.data-v-31e2de98 {
+.content .text-area.data-v-a9629fc2 {
     padding: 10px;
     font-size: 14px;
 }
-.content .text-area .together.data-v-31e2de98 {
+.content .text-area .together.data-v-a9629fc2 {
       background: white;
       display: inline-block;
       border-radius: 5px;
       position: relative;
 }
-.content .text-area .together .together-title.data-v-31e2de98 {
+.content .text-area .together .together-title.data-v-a9629fc2 {
         color: #007AFF;
         padding: 6px;
 }
-.content .text-area .together .together-choose.data-v-31e2de98 {
+.content .text-area .together .together-choose.data-v-a9629fc2 {
         position: absolute;
         background: white;
         z-index: 10;
 }
-.content .text-area .together .together-choose cover-view.data-v-31e2de98 {
+.content .text-area .together .together-choose cover-view.data-v-a9629fc2 {
           border-bottom: 1px solid #eee;
           padding: 6px;
 }
-.content .text-area .together-content.data-v-31e2de98 {
+.content .text-area .together-content.data-v-a9629fc2 {
       background: white;
       border-radius: 5px;
       margin-top: 10px;
 }
-.content .text-area .together-content textarea.data-v-31e2de98 {
+.content .text-area .together-content textarea.data-v-a9629fc2 {
         padding: 6px;
         height: 50px;
 }
-.content .text-area .together-content .picture.data-v-31e2de98 {
+.content .text-area .together-content .picture.data-v-a9629fc2 {
         padding: 10px;
 }
-.content .text-area .together-content .picture .imgList.data-v-31e2de98 {
+.content .text-area .together-content .picture .imgList.data-v-a9629fc2 {
           display: inline-block;
           margin-right: 5px;
 }
-.content .text-area .together-content .picture .imgList image.data-v-31e2de98 {
+.content .text-area .together-content .picture .imgList image.data-v-a9629fc2 {
             width: 50px;
             height: 50px;
 }
-.content .text-area .together-content .picture .addpicture.data-v-31e2de98 {
+.content .text-area .together-content .picture .addpicture.data-v-a9629fc2 {
           width: 50px;
           height: 50px;
           border: 1px solid #1ccfc9;
 }
-.content .text-area .together-content .camera.data-v-31e2de98 {
+.content .text-area .together-content .camera.data-v-a9629fc2 {
         background: #e2fdff;
         padding: 10px 0px;
 }
-.content .text-area .together-content .camera image.data-v-31e2de98 {
+.content .text-area .together-content .camera image.data-v-a9629fc2 {
           width: 25px;
           height: 25px;
           margin-left: 20px;
 }
-.content .text-area .type.data-v-31e2de98 {
+.content .text-area .type.data-v-a9629fc2 {
       background: white;
       padding: 10px;
       font-size: 14px;
       color: #333;
       border-bottom: 1px solid #eee;
 }
-.content .text-area .frequency.data-v-31e2de98 {
+.content .text-area .frequency.data-v-a9629fc2 {
       background: white;
       border-bottom: 1px solid #eee;
       font-size: 14px;
 }
-.content .text-area .frequency .active.data-v-31e2de98 {
+.content .text-area .frequency .active.data-v-a9629fc2 {
         background: #00e2e4;
         color: white;
 }
-.content .text-area .frequency .frequency1.data-v-31e2de98, .content .text-area .frequency .frequency2.data-v-31e2de98 {
+.content .text-area .frequency .frequency1.data-v-a9629fc2, .content .text-area .frequency .frequency2.data-v-a9629fc2 {
         display: inline-block;
         text-align: center;
         padding: 10px 5px;
@@ -109,14 +109,14 @@
         width: 50%;
         vertical-align: top;
 }
-.content .text-area .frequency .frequency1.data-v-31e2de98 {
+.content .text-area .frequency .frequency1.data-v-a9629fc2 {
         border-right: 1px solid #eee;
 }
-.content .text-area .frequency .frequency1 .uni-input.data-v-31e2de98 {
+.content .text-area .frequency .frequency1 .uni-input.data-v-a9629fc2 {
           width: 100%;
           height: 100%;
 }
-.content .detail.data-v-31e2de98 {
+.content .detail.data-v-a9629fc2 {
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
@@ -125,7 +125,7 @@
     left: 0;
     z-index: 100;
 }
-.content .detail .detail-content.data-v-31e2de98 {
+.content .detail .detail-content.data-v-a9629fc2 {
       padding: 20rpx;
       background: #eee;
       width: 90%;
@@ -133,11 +133,11 @@
       margin: 0 auto;
       margin-top: 50%;
 }
-.content .detail .detail-content .detail-title.data-v-31e2de98 {
+.content .detail .detail-content .detail-title.data-v-a9629fc2 {
         text-align: center;
         color: #666;
 }
-.content .detail .detail-content scroll-view.data-v-31e2de98 {
+.content .detail .detail-content scroll-view.data-v-a9629fc2 {
         height: 200rpx;
         background: white;
         width: 90%;
@@ -145,12 +145,12 @@
         padding: 20rpx;
         box-sizing: border-box;
 }
-.content .detail .detail-content scroll-view .scroll-title.data-v-31e2de98 {
+.content .detail .detail-content scroll-view .scroll-title.data-v-a9629fc2 {
           text-align: center;
           color: #666;
           font-size: 26rpx;
 }
-.content .detail .detail-content .detail-know.data-v-31e2de98 {
+.content .detail .detail-content .detail-know.data-v-a9629fc2 {
         background: #00e2e4;
         width: 85%;
         height: 80rpx;
@@ -160,13 +160,13 @@
         text-align: center;
         color: white;
 }
-.content .next.data-v-31e2de98 {
+.content .next.data-v-a9629fc2 {
     position: fixed;
     bottom: 20px;
     left: 20px;
     width: 90%;
 }
-.content .next view.data-v-31e2de98 {
+.content .next view.data-v-a9629fc2 {
       width: 95%;
       height: 50px;
       text-align: center;
@@ -177,7 +177,7 @@
       line-height: 50px;
       border-radius: 50px;
 }
-.content .chooseTime.data-v-31e2de98 {
+.content .chooseTime.data-v-a9629fc2 {
     background: white;
     padding: 10px 20px;
     border-radius: 0 0 5px 5px;
@@ -191,13 +191,13 @@
     -webkit-justify-content: space-between;
             justify-content: space-between;
 }
-.content .chooseTime view.data-v-31e2de98 {
+.content .chooseTime view.data-v-a9629fc2 {
       border-left: 1px solid #00e2e4;
       padding-right: 20rpx;
       padding-left: 30rpx;
       font-size: 22rpx;
 }
-.content .chooseTime view text.data-v-31e2de98 {
+.content .chooseTime view text.data-v-a9629fc2 {
         display: block;
 }
 

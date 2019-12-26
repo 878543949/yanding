@@ -72,6 +72,7 @@
 <script>
 	import MxDatePicker from "@/components/mx-datepicker/mx-datepicker.vue";
 	import luPopupWrapper from "@/components/lu-popup-wrapper/lu-popup-wrapper.vue";
+	import {agreementType} from '@/utils/api.js'
 	export default {
 		components:{
 			MxDatePicker,
@@ -107,9 +108,16 @@
 			}
 		},
 		onLoad() {
-
+			this.getType()
 		},
 		methods: {
+			getType(){
+				console.log(1)
+				
+				agreementType().then(res=>{
+					console.log(res)
+				})
+			},
 			//选择约定次数		
 			frequency(type){
 				if(type===1){

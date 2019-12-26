@@ -24,11 +24,19 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+<<<<<<< HEAD
 .personalCenter.data-v-04768a99 {
   background: #eee;
   padding: 20px;
 }
 .personalCenter .title.data-v-04768a99 {
+=======
+.personalCenter.data-v-24fc365e {
+  background: #eee;
+  padding: 20px;
+}
+.personalCenter .title.data-v-24fc365e {
+>>>>>>> 28a9ad44651d5b91a67e95f334221d690aa553c4
     background: white;
     display: -webkit-box;
     display: -webkit-flex;
@@ -39,18 +47,30 @@
     padding: 10px;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 .personalCenter .title image.data-v-04768a99 {
+=======
+.personalCenter .title image.data-v-24fc365e {
+>>>>>>> 28a9ad44651d5b91a67e95f334221d690aa553c4
       width: 75px;
       height: 75px;
       border-radius: 50%;
 }
+<<<<<<< HEAD
 .personalCenter .title view.data-v-04768a99:nth-of-type(2) {
+=======
+.personalCenter .title view.data-v-24fc365e:nth-of-type(2) {
+>>>>>>> 28a9ad44651d5b91a67e95f334221d690aa553c4
       -webkit-box-flex: 1;
       -webkit-flex: 1;
               flex: 1;
       margin-left: 10px;
 }
+<<<<<<< HEAD
 .personalCenter .title view.data-v-04768a99:nth-of-type(3) {
+=======
+.personalCenter .title view.data-v-24fc365e:nth-of-type(3) {
+>>>>>>> 28a9ad44651d5b91a67e95f334221d690aa553c4
       border: 1px solid #666;
       width: 170rpx;
       height: 60rpx;

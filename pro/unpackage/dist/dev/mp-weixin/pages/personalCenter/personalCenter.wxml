@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <view class="personalCenter data-v-04768a99"><view class="title data-v-04768a99"><view class="data-v-04768a99"><image src="../../static/image/cermea.jpg" class="data-v-04768a99"></image></view><view class="data-v-04768a99">zhagpei</view><view class="data-v-04768a99">编辑资料</view></view></view>
+=======
+<view class="personalCenter data-v-24fc365e"><view class="title data-v-24fc365e"><view class="data-v-24fc365e"><image src="../../static/image/cermea.jpg" class="data-v-24fc365e"></image></view><view class="data-v-24fc365e">zhagpei</view><view class="data-v-24fc365e">编辑资料</view></view></view>
+>>>>>>> 28a9ad44651d5b91a67e95f334221d690aa553c4

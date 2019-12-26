@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <view class="task data-v-4ae03219"><view class="task-keep data-v-4ae03219">已守约<text class="keep-num data-v-4ae03219">{{num}}</text>次</view><view class="task-doing data-v-4ae03219">{{"进行中("+doing+")"}}</view><view class="task-finsh data-v-4ae03219">{{"已完成("+finish+")"}}</view><view class="task-fail data-v-4ae03219">{{"未完成("+fail+")"}}</view><view data-event-opts="{{[['tap',[['goAdd',['$event']]]]]}}" class="task-add data-v-4ae03219" bindtap="__e"><text class="data-v-4ae03219">+</text><text class="data-v-4ae03219">约定</text></view></view>
+=======
+<view class="task data-v-02289b44"><view class="task-keep data-v-02289b44">已守约<text class="keep-num data-v-02289b44">{{num}}</text>次</view><view class="task-doing data-v-02289b44">{{"进行中("+doing+")"}}</view><view class="task-finsh data-v-02289b44">{{"已完成("+finish+")"}}</view><view class="task-fail data-v-02289b44">{{"未完成("+fail+")"}}</view><view data-event-opts="{{[['tap',[['goAdd',['$event']]]]]}}" class="task-add data-v-02289b44" bindtap="__e"><text class="data-v-02289b44">+</text><text class="data-v-02289b44">约定</text></view></view>
+>>>>>>> 28a9ad44651d5b91a67e95f334221d690aa553c4
